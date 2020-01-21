@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       user: 'postgres',
-      password: 'postgres',
+      password: process.env.PASSWORD,
       database: 'cars'
     },
     migrations: {
