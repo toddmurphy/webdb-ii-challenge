@@ -2,12 +2,18 @@
 
 module.exports = {
   development: {
-    client: 'postgres',
+    client: 'pg',
     connection: {
       host: 'localhost',
       user: 'postgres',
       password: 'postgres',
       database: 'cars'
+    },
+    migrations: {
+      directory: './data/migrations'
+    },
+    seeds: {
+      directory: './data/seeds'
     }
   }
 };
