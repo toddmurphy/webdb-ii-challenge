@@ -25,7 +25,8 @@ router.post('/', async (req, res) => {
       status: req.body.status
     };
 
-    const [id] = await db('cars').insert(newPost);
+    const [id] = await db('cars').insert(newPost, 'id');
+
     res.json(
       await db('cars')
         .where('id', id)
