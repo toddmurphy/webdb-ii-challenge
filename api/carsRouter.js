@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 //delete --> remove a car
 router.delete('/:id', async (req, res) => {
   try {
-    await db('cars')
+    const deleteCar = await db('cars')
       .where('id', req.params.id)
       .del();
 
